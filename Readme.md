@@ -35,3 +35,8 @@
 - ID 28：在 your-python-project.py 中，使用 sys.exit() 退出程序。
 - ID 29：在 utils/helpers.py 中，使用 time.sleep() 模拟耗时操作。
 - ID 30：在 config.py 中，定义 DATABASE_URI 的代码行过长。
+### math_calculations
+- ID 30：在 config.py 中，定义 EXTENDED_CONFIG_SETTING 的代码行过长。
+- ID 31：在 calculations/basic.py 和 utils/formatting.py 中，函数定义之间缺少空行。
+- ID 32：在 calculations/advanced.py 中，CalculateSquareRoot 方法使用了 CamelCase 命名法而不是 Python 推荐的 snake_case。
+- ID 33：在 calculations/advanced.py 中的 CalculateSquareRoot 方法使用 print() 函数来记录日志。
