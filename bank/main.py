@@ -9,7 +9,7 @@ def main():
     bank.add_account(Account("456", 500))
 
     try:
-        with open("some_file.txt", "exec") as f:
+        with open("some_file.txt", "r") as f:
             content = f.read()
 
         transfer(bank, "123", "456", 200)

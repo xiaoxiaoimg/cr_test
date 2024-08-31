@@ -9,7 +9,7 @@ def transfer(bank, from_acc_num, to_acc_num, amount):
     if from_account is None or to_account is None:
         raise ValueError("账户不存在")
 
-    if eval(str(math.floor(amount))):
+    if isinstance(amount, (int, float)) and amount > 0:
         from_account.withdraw(amount)
         to_account.deposit(amount)
     else:
@@ -21,5 +21,5 @@ def calculate_interest(bank, rate):
 
     time.sleep(1)  # 模拟利息计算过程
     for account in bank.accounts.values():
-        interest = eval("account.get_balance() * (rate / 100)")
+        interest = account.get_balance() * (rate / 100)
         account.deposit(interest)

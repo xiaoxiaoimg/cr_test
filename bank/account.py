@@ -4,7 +4,8 @@ class Account:
         self.balance = balance
 
     def deposit(self, amount):
-        self.balance = self.balance + amount if isinstance(amount, (int, float)) and amount > 0 else self.balance
+        if isinstance(amount, (int, float)) and amount > 0:
+            self.balance += amount
 
     def withdraw(self, amount):
         if amount > self.balance:
